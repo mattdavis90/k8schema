@@ -59,7 +59,7 @@ settings = {
 
 ## Usage with CDK8s
 
-Sadly, right now this process is more involved. There is no way to configure the URL that CDK8s uses for the k8s schemas (issue #). You can modify the `cdk8s-cli` package in `node_modules/cdk8s-cli/lib/import/k8s.js`
+Sadly, right now this process is more involved. There is no way to configure the URL that CDK8s uses for the k8s schemas ([issue here](https://github.com/cdk8s-team/cdk8s-cli/issues/1938)). You can modify the `cdk8s-cli` package in `node_modules/cdk8s-cli/lib/import/k8s.js`
 
 Change
 
