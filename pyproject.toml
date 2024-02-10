@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "k8schema"
+authors = [
+    {name = "Matt Davis"},
+]
+description = "Pull OpenAPIv3 Schemas from K8s for yamlls"
+readme = "README.md"
+license = {text ="MIT"}
+classifiers = [
+    "Programming Language :: Python :: 3"
+]
+dependencies = [
+    "click ~= 8.1.7",
+    "fastapi ~= 0.109.2",
+    "pyyaml ~= 6.0.1",
+    "requests ~= 2.31.0",
+    "structlog ~= 24.1.0",
+    "uvicorn ~= 0.27.0.post1"
+]
+dynamic = ["version"]
+
+[project.scripts]
+hantek_wave_viewer = "k8schema:main"
+
+[tool.setuptools]
+packages = ["k8schema"]
+
+[tool.setuptools.dynamic]
+version = {attr = "k8schema._version.VERSION"}
+
+[tool.isort]
+profile = "black"
+
+[tool.pylint.format]
+max-line-length = "88"
+
+[tool.mypy]
+check_untyped_defs = true
