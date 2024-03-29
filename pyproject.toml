@@ -24,7 +24,7 @@ dependencies = [
 dynamic = ["version"]
 
 [project.scripts]
-hantek_wave_viewer = "k8schema:main"
+k8schema = "k8schema:main"
 
 [tool.setuptools]
 packages = ["k8schema"]
